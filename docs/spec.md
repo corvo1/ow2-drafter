@@ -19,7 +19,68 @@ A lightweight, real-time recommendation tool for Overwatch 2. Users select curre
 
 ---
 
-## 3. Data Schema (`hero-config.json`)
+## 3. Project Structure (Controller-View Pattern)
+
+The application follows a **Controller-View separation pattern** for clean architecture and testability.
+
+### File Organization
+```
+src/
+├── screens/
+│   └── HeroDrafter/
+│       ├── HeroDrafterController.ts   # Logic & state management
+│       ├── HeroDrafterScreen.tsx      # UI rendering
+│       └── index.ts                   # Public exports
+├── components/
+│   └── HeroCard/
+│       ├── HeroCardController.ts
+│       ├── HeroCardView.tsx
+│       └── index.ts
+└── hooks/
+    └── useController.ts               # Generic controller hook
+```
+
+### Controller Responsibilities
+- State management (local state, Zustand store interactions)
+- Business logic (score calculations, filtering)
+- Event handlers (click handlers, form submissions)
+- Side effects (data fetching, subscriptions)
+
+### View Responsibilities
+- UI rendering only
+- Receives all data and callbacks from controller via `useController`
+- No direct state management or business logic
+
+### Usage Pattern
+```tsx
+// HeroDrafterController.ts
+export const useHeroDrafterController = () => {
+  const [selectedTeammates, setSelectedTeammates] = useState<Hero[]>([]);
+  const [selectedEnemies, setSelectedEnemies] = useState<Hero[]>([]);
+  
+  const topPicks = useMemo(() => calculateTopPicks(...), []);
+  
+  const handleAddToTeam = (hero: Hero) => { ... };
+  
+  return { selectedTeammates, selectedEnemies, topPicks, handleAddToTeam };
+};
+
+// HeroDrafterScreen.tsx
+export const HeroDrafterScreen = () => {
+  const controller = useHeroDrafterController();
+  
+  return (
+    <div>
+      <HeroGrid onSelect={controller.handleAddToTeam} />
+      <Sidebar topPicks={controller.topPicks} />
+    </div>
+  );
+};
+```
+
+---
+
+## 4. Data Schema (`hero-config.json`)
 The application relies on a static JSON configuration. Each hero object follows this structure:
 
 ```json
@@ -34,7 +95,7 @@ The application relies on a static JSON configuration. Each hero object follows 
 
 ---
 
-## 4. Logic (The Engine)
+## 5. Logic (The Engine)
 
 The **Viability Score ()** for any hero () is calculated as the sum of Synergy and Counter-utility:
 
@@ -53,15 +114,15 @@ If picking **Kiriko**:
 
 ---
 
-## 5. UI/UX Requirements
+## 6. UI/UX Requirements
 
-### 5.1 Hero Selection Grid
+### 6.1 Hero Selection Grid
 
 * Display all 45 heroes with icons.
 * Filter by role: **Tank**, **DPS**, **Support**.
 * Clicking a hero opens a context menu: **"Add to My Team"** or **"Add to Enemy Team"**.
 
-### 5.2 The Recommendation Engine (Live Sidebar)
+### 6.2 The Recommendation Engine (Live Sidebar)
 
 * **Top Picks:** Display top 3 heroes per role with the highest .
 * **Avoid List:** Display heroes with a score  (labeled "Heavily Countered").
@@ -70,7 +131,7 @@ If picking **Kiriko**:
 
 
 
-### 5.3 Themes & Branding
+### 6.3 Themes & Branding
 
 * **Primary Accent:** `#FA8112` (Knot Orange).
 * **Background:** `#0F172A` (Slate Dark) to contrast with the game UI.
