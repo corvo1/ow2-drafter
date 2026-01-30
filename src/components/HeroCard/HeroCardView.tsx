@@ -1,15 +1,23 @@
 import { Hero } from '../../types/hero';
+import { useHeroCardController } from './HeroCardController';
 import clsx from 'clsx';
 import { User, Skull } from 'lucide-react';
 
-interface HeroCardViewProps {
+interface HeroCardProps {
   hero: Hero;
-  selectionState: 'none' | 'teammate' | 'enemy';
-  onSelectTeammate: () => void;
-  onSelectEnemy: (e: React.MouseEvent) => void;
+  isTeammate: boolean;
+  isEnemy: boolean;
+  onToggle: (hero: Hero, team: 'yours' | 'enemy') => void;
 }
 
-export const HeroCard = ({ hero, selectionState, onSelectTeammate, onSelectEnemy }: HeroCardViewProps) => {
+export const HeroCard = ({ hero, isTeammate, isEnemy, onToggle }: HeroCardProps) => {
+  const { selectionState, handleSelectTeammate, handleSelectEnemy } = useHeroCardController({
+    hero,
+    isTeammate,
+    isEnemy,
+    onToggle
+  });
+
   return (
     <div 
       className={clsx(
@@ -18,8 +26,8 @@ export const HeroCard = ({ hero, selectionState, onSelectTeammate, onSelectEnemy
         selectionState === 'teammate' && "bg-slate-800 border-orange-500 shadow-[0_0_10px_rgba(250,129,18,0.3)]",
         selectionState === 'enemy' && "bg-red-950/30 border-red-500 shadow-[0_0_10px_rgba(239,68,68,0.3)]"
       )}
-      onClick={onSelectTeammate}
-      onContextMenu={onSelectEnemy}
+      onClick={handleSelectTeammate}
+      onContextMenu={handleSelectEnemy}
       title="Left Click: Your Team | Right Click: Enemy Team"
     >
         {/* Placeholder Icon / Image */}
