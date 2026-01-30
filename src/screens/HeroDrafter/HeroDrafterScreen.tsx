@@ -1,13 +1,13 @@
 import { useHeroDrafterController } from './HeroDrafterController';
 import { HeroCard } from '../../components/HeroCard';
-import { User, Skull, AlertTriangle } from 'lucide-react';
+import { User, Skull, AlertTriangle, RotateCcw } from 'lucide-react';
 import heroDataRaw from '../../hero-config.json';
 import { Hero } from '../../types/hero';
 
 const allHeroes = heroDataRaw as unknown as Hero[];
 
 export const HeroDrafterScreen = () => {
-    const { yourTeam, enemyTeam, toggleHero, recommendations } = useHeroDrafterController();
+    const { yourTeam, enemyTeam, toggleHero, recommendations, resetTeams } = useHeroDrafterController();
 
     const isTeammate = (hero: Hero) => yourTeam.some(h => h.hero === hero.hero);
     const isEnemy = (hero: Hero) => enemyTeam.some(h => h.hero === hero.hero);
@@ -27,12 +27,21 @@ export const HeroDrafterScreen = () => {
                 {/* Main Content - Hero Grid */}
                 <main className="flex-1 overflow-y-auto p-6 scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-transparent">
                     <div className="max-w-5xl mx-auto space-y-8">
+                        <div className="flex justify-start mb-2">
+                            <button
+                                onClick={resetTeams}
+                                className="inline-flex items-center gap-2 px-3 py-1 bg-slate-800 hover:bg-slate-700 rounded text-slate-300 hover:text-white text-sm transition-colors"
+                            >
+                                <RotateCcw size={14} />
+                                <span>Reset Draft</span>
+                            </button>
+                        </div>
                         {['tank', 'dps', 'support'].map((role) => (
                             <section key={role}>
                                 <h2 className="text-lg font-bold text-slate-400 uppercase tracking-widest mb-4 border-l-4 border-orange-500 pl-3">
                                     {role === 'dps' ? 'Damage' : role}
                                 </h2>
-                                <div className="grid grid-cols-[repeat(auto-fill,minmax(6rem,1fr))] gap-4">
+                            <div className="grid grid-cols-[repeat(auto-fill,minmax(6rem,1fr))] gap-4">
                                     {allHeroes.filter(h => h.role === role).map(hero => (
                                         <HeroCard 
                                             key={hero.hero} 

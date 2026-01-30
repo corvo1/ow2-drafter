@@ -62,11 +62,17 @@ export const useHeroDrafterController = () => {
     })).sort((a, b) => b.score - a.score);
   }, [availableHeroes, yourTeam, enemyTeam]);
 
+  const resetTeams = () => {
+    setYourTeam([]);
+    setEnemyTeam([]);
+  };
+
   return {
     yourTeam,
     enemyTeam,
     availableHeroes,
     toggleHero,
-    recommendations
+    recommendations,
+    resetTeams, 
   };
 };
