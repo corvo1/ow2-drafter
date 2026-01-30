@@ -9,7 +9,8 @@ interface UseHeroCardControllerProps {
 
 export const useHeroCardController = ({ hero, isTeammate, isEnemy, onToggle }: UseHeroCardControllerProps) => {
     
-    const selectionState = isTeammate ? 'teammate' : isEnemy ? 'enemy' : 'none';
+    const selectionState: 'none' | 'teammate' | 'enemy' | 'both' = 
+        isTeammate && isEnemy ? 'both' : isTeammate ? 'teammate' : isEnemy ? 'enemy' : 'none';
 
     const handleSelectTeammate = () => {
         onToggle(hero, 'yours');

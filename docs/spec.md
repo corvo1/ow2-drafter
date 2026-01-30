@@ -121,6 +121,9 @@ If picking **Kiriko**:
 * Display all 45 heroes with icons.
 * Filter by role: **Tank**, **DPS**, **Support**.
 * Clicking a hero opens a context menu: **"Add to My Team"** or **"Add to Enemy Team"**.
+* **Dual Selection:** A hero can be selected for **both** "My Team" **and** "Enemy Team" simultaneously.
+  * This is useful when mirroring enemy picks or analyzing specific matchups.
+  * **Visual Indicator:** Heroes selected for both teams display a purple border/glow with both team icons.
 
 ### 6.2 The Recommendation Engine (Live Sidebar)
 

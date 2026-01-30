@@ -21,14 +21,11 @@ export const useHeroDrafterController = () => {
         if (prev.find(h => h.hero === hero.hero)) return prev.filter(h => h.hero !== hero.hero);
         return [...prev, hero];
       });
-      // Remove from enemy if present (though UI should prevent this overlap visually)
-      setEnemyTeam(prev => prev.filter(h => h.hero !== hero.hero));
     } else {
       setEnemyTeam(prev => {
         if (prev.find(h => h.hero === hero.hero)) return prev.filter(h => h.hero !== hero.hero);
         return [...prev, hero];
       });
-      setYourTeam(prev => prev.filter(h => h.hero !== hero.hero));
     }
   };
 
