@@ -1,0 +1,272 @@
+[
+  {
+    "hero": "D.Va",
+    "role": "tank",
+    "counter": { "Zarya": -5, "Mei": -4, "Symmetra": -4, "Widowmaker": 5, "Pharah": 4 },
+    "play_with": { "Winston": 4, "Kiriko": 4, "Mercy": 3, "Symmetra": -2 }
+  },
+  {
+    "hero": "Doomfist",
+    "role": "tank",
+    "counter": { "Sombra": -5, "Orisa": -4, "Roadhog": -4, "Zenyatta": 5, "Widowmaker": 5 },
+    "play_with": { "Kiriko": 5, "Tracer": 4, "Sombra": 4, "Lifeweaver": 3 }
+  },
+  {
+    "hero": "Hazard",
+    "role": "tank",
+    "counter": { "Ana": -5, "Orisa": -4, "D.Va": -3, "Reinhardt": 5, "Sigma": 4 },
+    "play_with": { "Wuyang": 5, "Lucio": 4, "Ana": 4, "Vendetta": 3 }
+  },
+  {
+    "hero": "Junker Queen",
+    "role": "tank",
+    "counter": { "Kiriko": -5, "Orisa": -4, "Bastion": -4, "Roadhog": 4, "Reinhardt": 3 },
+    "play_with": { "Lucio": 5, "Brigitte": 4, "Kiriko": 4, "Genji": 3 }
+  },
+  {
+    "hero": "Mauga",
+    "role": "tank",
+    "counter": { "Ana": -5, "Sigma": -4, "D.Va": -4, "Winston": 5, "Roadhog": 5 },
+    "play_with": { "Kiriko": 5, "Lifeweaver": 4, "Bastion": 3, "Mercy": 2 }
+  },
+  {
+    "hero": "Orisa",
+    "role": "tank",
+    "counter": { "Zarya": -4, "Symmetra": -4, "Hanzo": -3, "Doomfist": 5, "Reinhardt": 5 },
+    "play_with": { "Ana": 4, "Baptiste": 4, "Bastion": 3, "Torbjorn": 3 }
+  },
+  {
+    "hero": "Ramattra",
+    "role": "tank",
+    "counter": { "Ana": -4, "Orisa": -4, "Bastion": -4, "Reinhardt": 5, "Brigitte": 4 },
+    "play_with": { "Lucio": 5, "Ana": 4, "Wuyang": 4, "Kiriko": 3 }
+  },
+  {
+    "hero": "Reinhardt",
+    "role": "tank",
+    "counter": { "Ramattra": -5, "Orisa": -5, "Bastion": -4, "Soldier: 76": 3, "Cassidy": 3 },
+    "play_with": { "Lucio": 5, "Ana": 5, "Baptiste": 4, "Brigitte": 4 }
+  },
+  {
+    "hero": "Roadhog",
+    "role": "tank",
+    "counter": { "Ana": -5, "Mauga": -5, "Orisa": -4, "Winston": 5, "Doomfist": 4 },
+    "play_with": { "Kiriko": 5, "Lifeweaver": 4, "Mercy": -2, "Lucio": -3 }
+  },
+  {
+    "hero": "Sigma",
+    "role": "tank",
+    "counter": { "Zarya": -4, "Ramattra": -4, "Symmetra": -4, "Bastion": 5, "Ashe": 4 },
+    "play_with": { "Baptiste": 5, "Zenyatta": 4, "Ashe": 4, "Mercy": 3 }
+  },
+  {
+    "hero": "Winston",
+    "role": "tank",
+    "counter": { "Reaper": -5, "Bastion": -5, "Mauga": -4, "Genji": 5, "Widowmaker": 5 },
+    "play_with": { "Tracer": 5, "D.Va": 4, "Ana": 4, "Kiriko": 4 }
+  },
+  {
+    "hero": "Wrecking Ball",
+    "role": "tank",
+    "counter": { "Sombra": -5, "Brigitte": -4, "Ana": -4, "Widowmaker": 5, "Zenyatta": 5 },
+    "play_with": { "Tracer": 4, "Sombra": 4, "Zenyatta": 4, "Kiriko": 3 }
+  },
+  {
+    "hero": "Zarya",
+    "role": "tank",
+    "counter": { "Winston": -4, "Pharah": -4, "Bastion": -4, "D.Va": 5, "Orisa": 4 },
+    "play_with": { "Ana": 4, "Genji": 4, "Reaper": 3, "Hanzo": 3 }
+  },
+  {
+    "hero": "Ashe",
+    "role": "dps",
+    "counter": { "Genji": -4, "Winston": -4, "Widowmaker": -3, "Pharah": 5, "Echo": 4 },
+    "play_with": { "Mercy": 5, "Sigma": 4, "Zenyatta": 3, "Ana": 3 }
+  },
+  {
+    "hero": "Bastion",
+    "role": "dps",
+    "counter": { "Genji": -5, "Ana": -4, "Roadhog": -4, "Reinhardt": 5, "Winston": 5 },
+    "play_with": { "Baptiste": 4, "Kiriko": 4, "Orisa": 3, "Mauga": 3 }
+  },
+  {
+    "hero": "Cassidy",
+    "role": "dps",
+    "counter": { "Widowmaker": -4, "Hanzo": -4, "Tracer": 5, "Sombra": 4 },
+    "play_with": { "Mercy": 3, "Ana": 3, "Lucio": 2, "Brigitte": 4 }
+  },
+  {
+    "hero": "Echo",
+    "role": "dps",
+    "counter": { "Cassidy": -4, "Ashe": -4, "Widowmaker": -4, "Reaper": 4, "Junkrat": 5 },
+    "play_with": { "Mercy": 5, "Ana": 3, "Kiriko": 3, "Winston": 3 }
+  },
+  {
+    "hero": "Freja",
+    "role": "dps",
+    "counter": { "Widowmaker": -5, "Genji": -3, "Tracer": -3, "Bastion": 5, "Reaper": 4 },
+    "play_with": { "Mercy": 5, "Sigma": 4, "Juno": 4, "Ana": 3 }
+  },
+  {
+    "hero": "Genji",
+    "role": "dps",
+    "counter": { "Winston": -5, "Moira": -4, "Zarya": -4, "Widowmaker": 5, "Bastion": 4 },
+    "play_with": { "Ana": 5, "Zarya": 4, "Winston": 4, "Kiriko": 4 }
+  },
+  {
+    "hero": "Hanzo",
+    "role": "dps",
+    "counter": { "Winston": -4, "D.Va": -4, "Tracer": -3, "Bastion": 4, "Torbjorn": 4 },
+    "play_with": { "Zarya": 4, "Sigma": 3, "Mercy": 3, "Ana": 3 }
+  },
+  {
+    "hero": "Junkrat",
+    "role": "dps",
+    "counter": { "Pharah": -5, "Echo": -5, "D.Va": -3, "Reinhardt": 4, "Brigitte": 4 },
+    "play_with": { "Mercy": 3, "Ana": 2, "Baptiste": 2, "Lucio": -2 }
+  },
+  {
+    "hero": "Mei",
+    "role": "dps",
+    "counter": { "Pharah": -5, "Echo": -5, "Sombra": -3, "Genji": 4, "D.Va": 4 },
+    "play_with": { "Reinhardt": 4, "Sigma": 3, "Ana": 3, "Baptiste": 3 }
+  },
+  {
+    "hero": "Pharah",
+    "role": "dps",
+    "counter": { "Widowmaker": -5, "Soldier: 76": -4, "Ashe": -4, "Reaper": 5, "Junkrat": 5 },
+    "play_with": { "Mercy": 5, "Lifeweaver": 3, "Ana": 2, "Wuyang": 2 }
+  },
+  {
+    "hero": "Reaper",
+    "role": "dps",
+    "counter": { "Pharah": -5, "Echo": -5, "Widowmaker": -4, "Winston": 5, "Roadhog": 4 },
+    "play_with": { "Lucio": 4, "Kiriko": 4, "Wuyang": 4, "Ana": 3 }
+  },
+  {
+    "hero": "Sojourn",
+    "role": "dps",
+    "counter": { "D.Va": -4, "Widowmaker": -4, "Winston": -3, "Mercy": 5, "Soldier: 76": 3 },
+    "play_with": { "Mercy": 5, "Sigma": 4, "Ana": 3, "Kiriko": 3 }
+  },
+  {
+    "hero": "Soldier: 76",
+    "role": "dps",
+    "counter": { "D.Va": -4, "Widowmaker": -4, "Sigma": -3, "Pharah": 4, "Mercy": 4 },
+    "play_with": { "Mercy": 4, "Ana": 4, "Baptiste": 3, "Lucio": 2 }
+  },
+  {
+    "hero": "Sombra",
+    "role": "dps",
+    "counter": { "Hanzo": -4, "Cassidy": -4, "Tracer": -3, "Widowmaker": 5, "Doomfist": 5 },
+    "play_with": { "Tracer": 5, "Winston": 4, "Wrecking Ball": 4, "Kiriko": 4 }
+  },
+  {
+    "hero": "Symmetra",
+    "role": "dps",
+    "counter": { "Pharah": -5, "Echo": -5, "Winston": -4, "D.Va": 4, "Sigma": 4 },
+    "play_with": { "Sigma": 3, "Reinhardt": 3, "Ana": 2, "Baptiste": 2 }
+  },
+  {
+    "hero": "Torbjorn",
+    "role": "dps",
+    "counter": { "Widowmaker": -5, "Pharah": -4, "Hanzo": -4, "Tracer": 5, "Genji": 4 },
+    "play_with": { "Orisa": 3, "Sigma": 3, "Baptiste": 3, "Ana": 2 }
+  },
+  {
+    "hero": "Tracer",
+    "role": "dps",
+    "counter": { "Torbjorn": -5, "Brigitte": -4, "Moira": -3, "Zenyatta": 5, "Ana": 4 },
+    "play_with": { "Winston": 5, "Sombra": 5, "Wrecking Ball": 4, "Lucio": 4 }
+  },
+  {
+    "hero": "Vendetta",
+    "role": "dps",
+    "counter": { "Widowmaker": -4, "Cassidy": -4, "Tracer": -3, "Ashe": 4, "Soldier: 76": 4 },
+    "play_with": { "Wuyang": 5, "Kiriko": 4, "Hazard": 3, "Lucio": 3 }
+  },
+  {
+    "hero": "Venture",
+    "role": "dps",
+    "counter": { "Pharah": -5, "Echo": -5, "Mei": -4, "Widowmaker": 4, "Zenyatta": 4 },
+    "play_with": { "Lucio": 4, "Kiriko": 4, "Winston": 3, "Ana": 3 }
+  },
+  {
+    "hero": "Widowmaker",
+    "role": "dps",
+    "counter": { "Winston": -5, "Genji": -5, "Sombra": -5, "Pharah": 5, "Zenyatta": 5 },
+    "play_with": { "Mercy": 4, "Zenyatta": 3, "Sigma": 3, "Hanzo": -3 }
+  },
+  {
+    "hero": "Ana",
+    "role": "support",
+    "counter": { "Kiriko": -5, "D.Va": -4, "Sombra": -4, "Roadhog": 5, "Mauga": 5 },
+    "play_with": { "Genji": 5, "Soldier: 76": 4, "Reinhardt": 4, "Sigma": 3 }
+  },
+  {
+    "hero": "Baptiste",
+    "role": "support",
+    "counter": { "Sombra": -4, "Reaper": -3, "Venture": -3, "Pharah": 4, "Echo": 4 },
+    "play_with": { "Sigma": 5, "Bastion": 4, "Reinhardt": 4, "Soldier: 76": 3 }
+  },
+  {
+    "hero": "Brigitte",
+    "role": "support",
+    "counter": { "Ramattra": -4, "Junkrat": -4, "Pharah": -4, "Tracer": 5, "Genji": 4 },
+    "play_with": { "Ana": 5, "Junker Queen": 4, "Reinhardt": 4, "Lucio": -2 }
+  },
+  {
+    "hero": "Illari",
+    "role": "support",
+    "counter": { "D.Va": -4, "Genji": -4, "Sombra": -4, "Pharah": 4, "Mercy": 4 },
+    "play_with": { "Sigma": 4, "Sojourn": 3, "Juno": 3, "Baptiste": 2 }
+  },
+  {
+    "hero": "Juno",
+    "role": "support",
+    "counter": { "D.Va": -4, "Widowmaker": -4, "Sombra": -4, "Reinhardt": 4, "Roadhog": 3 },
+    "play_with": { "Sigma": 4, "Sojourn": 4, "Freja": 4, "Ana": 3 }
+  },
+  {
+    "hero": "Kiriko",
+    "role": "support",
+    "counter": { "Tracer": -3, "Sombra": -3, "Ana": 5, "Junker Queen": 5 },
+    "play_with": { "Genji": 5, "Vendetta": 4, "Roadhog": 4, "Winston": 4 }
+  },
+  {
+    "hero": "Lifeweaver",
+    "role": "support",
+    "counter": { "Sombra": -4, "D.Va": -3, "Ana": -3, "Zarya": 4, "Mauga": 4 },
+    "play_with": { "Mauga": 5, "Roadhog": 4, "Doomfist": 3, "Cassidy": 3 }
+  },
+  {
+    "hero": "Lucio",
+    "role": "support",
+    "counter": { "Moira": -4, "Symmetra": -4, "Cassidy": -3, "Widowmaker": 4, "Hanzo": 4 },
+    "play_with": { "Reinhardt": 5, "Ramattra": 5, "Junker Queen": 5, "Tracer": 4 }
+  },
+  {
+    "hero": "Mercy",
+    "role": "support",
+    "counter": { "Sombra": -4, "Widowmaker": -4, "Soldier: 76": -4, "Pharah": 5, "Echo": 5 },
+    "play_with": { "Pharah": 5, "Echo": 5, "Ashe": 5, "Sojourn": 5 }
+  },
+  {
+    "hero": "Moira",
+    "role": "support",
+    "counter": { "D.Va": -4, "Ana": -4, "Roadhog": -3, "Genji": 4, "Tracer": 3 },
+    "play_with": { "Reinhardt": 3, "Lucio": 3, "Wuyang": 3, "Kiriko": 2 }
+  },
+  {
+    "hero": "Wuyang",
+    "role": "support",
+    "counter": { "Doomfist": -5, "Winston": -4, "Genji": -4, "Zenyatta": 5, "Brigitte": 4 },
+    "play_with": { "Hazard": 5, "Vendetta": 5, "Ramattra": 4, "Reaper": 4 }
+  },
+  {
+    "hero": "Zenyatta",
+    "role": "support",
+    "counter": { "Sombra": -5, "Tracer": -5, "Widowmaker": -4, "Roadhog": 5, "Mauga": 5 },
+    "play_with": { "Sigma": 4, "Baptiste": 4, "Wrecking Ball": 4, "Ashe": 3 }
+  }
+]
