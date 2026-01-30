@@ -1,3 +1,4 @@
+import { useCallback } from 'react';
 import { Hero } from '../../types/hero';
 
 interface UseHeroCardControllerProps {
@@ -12,14 +13,14 @@ export const useHeroCardController = ({ hero, isTeammate, isEnemy, onToggle }: U
     const selectionState: 'none' | 'teammate' | 'enemy' | 'both' = 
         isTeammate && isEnemy ? 'both' : isTeammate ? 'teammate' : isEnemy ? 'enemy' : 'none';
 
-    const handleSelectTeammate = () => {
+    const handleSelectTeammate = useCallback(() => {
         onToggle(hero, 'yours');
-    };
+    }, [onToggle, hero]);
 
-    const handleSelectEnemy = (e: React.MouseEvent) => {
+    const handleSelectEnemy = useCallback((e: React.MouseEvent) => {
         e.preventDefault(); // Prevent default context menu
         onToggle(hero, 'enemy');
-    };
+    }, [onToggle, hero]);
 
     return {
         selectionState,
