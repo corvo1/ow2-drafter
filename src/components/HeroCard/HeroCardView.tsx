@@ -1,4 +1,5 @@
 import { Hero } from '../../types/hero';
+import { useState } from 'react';
 import { useHeroCardController } from './HeroCardController';
 import clsx from 'clsx';
 import { User, Skull } from 'lucide-react';
@@ -18,10 +19,20 @@ export const HeroCard = ({ hero, isTeammate, isEnemy, onToggle }: HeroCardProps)
     onToggle
   });
 
+  const [imageError, setImageError] = useState(false);
+
+  const getHeroImageId = (name: string) => {
+    return name.toLowerCase().replace(/[.:]/g, '').replace(/ /g, '_');
+  };
+
+  const imageId = getHeroImageId(hero.hero);
+  // Assuming images are in /heroes/ directory in public folder
+  const imageUrl = `/heroes/${imageId}.png`;
+
   return (
     <div 
       className={clsx(
-        "relative w-24 h-24 rounded-lg flex flex-col items-center justify-center cursor-pointer transition-all duration-200 border-2",
+        "relative w-24 h-24 rounded-lg flex flex-col items-center justify-center cursor-pointer transition-all duration-200 border-2 overflow-hidden",
         selectionState === 'none' && "bg-slate-800 border-slate-700 hover:border-slate-500",
         selectionState === 'teammate' && "bg-slate-800 border-orange-500 shadow-[0_0_10px_rgba(250,129,18,0.3)]",
         selectionState === 'enemy' && "bg-red-950/30 border-red-500 shadow-[0_0_10px_rgba(239,68,68,0.3)]",
@@ -35,28 +46,40 @@ export const HeroCard = ({ hero, isTeammate, isEnemy, onToggle }: HeroCardProps)
       onContextMenu={handleSelectEnemy}
       title="Left Click: Your Team | Right Click: Enemy Team"
     >
-        {/* Placeholder Icon / Image */}
-        <div className="text-2xl font-bold text-slate-400 mb-1">
-            {hero.hero.substring(0, 2).toUpperCase()}
-        </div>
+        {!imageError ? (
+           <img 
+             src={imageUrl} 
+             alt={hero.hero}
+             className="w-full h-full object-cover absolute inset-0 opacity-80 hover:opacity-100 transition-opacity"
+             onError={() => setImageError(true)}
+           />
+        ) : (
+            <div className="text-2xl font-bold text-slate-400 mb-1 z-10">
+                {hero.hero.substring(0, 2).toUpperCase()}
+            </div>
+        )}
         
-        <span className="text-xs text-center font-medium leading-tight px-1 truncate w-full">
+        {/* Helper text overlay when image is shown, or main text when not */}
+        <span className={clsx(
+          "text-xs text-center font-medium leading-tight px-1 truncate w-full z-10",
+          !imageError && "bg-black/60 text-white bottom-0 absolute py-1"
+        )}>
             {hero.hero}
         </span>
 
         {/* Status Indicator */}
         {selectionState === 'teammate' && (
-            <div className="absolute -top-2 -right-2 rounded-full p-1 bg-orange-500">
+            <div className="absolute -top-2 -right-2 rounded-full p-1 bg-orange-500 z-20">
                 <User size={12} className="text-white" />
             </div>
         )}
         {selectionState === 'enemy' && (
-            <div className="absolute -top-2 -right-2 rounded-full p-1 bg-red-500">
+            <div className="absolute -top-2 -right-2 rounded-full p-1 bg-red-500 z-20">
                 <Skull size={12} className="text-white" />
             </div>
         )}
         {selectionState === 'both' && (
-            <div className="absolute -top-2 -right-2 flex">
+            <div className="absolute -top-2 -right-2 flex z-20">
                 <div className="rounded-full p-1 bg-orange-500 -mr-1 z-10 border border-slate-900">
                     <User size={10} className="text-white" />
                 </div>
